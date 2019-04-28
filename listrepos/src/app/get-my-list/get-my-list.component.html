@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>Get My repos</h1>
+<form (submit)="getList(username)">
+
+
+  <div class="form-group">
+  Name<input type="text" [(ngModel)]="username" name="username" class="form-control">
+    </div>
+    <input type="submit" value="get Repos" class="btn btn-success">
+
+</form>
+<div *ngIf='length > 1 '>
+<p>Total no of repositories is : {{length}}</p>
+</div>
+<ul *ngFor='let rep of repo'>
+  <li>{{rep.name}}</li>
+  </ul>
+  </div>
+
+
